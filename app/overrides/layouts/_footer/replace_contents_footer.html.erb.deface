@@ -1,0 +1,13 @@
+<!-- replace_contents 'footer' -->
+
+      <ul>
+        <li>
+          <%= Date.today.year %> © 
+        </li>
+        <li id="trade_mark">
+          <%= link_to t('site.name'), 'http://fi-ware.idm.com/' %>
+        </li>
+        <li>
+          a core for building social network applications!
+        </li>
+      </ul>

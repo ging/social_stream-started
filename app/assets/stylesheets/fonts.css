@@ -1,0 +1,6 @@
+/************* typography*******/
+
+@font-face {
+  font-family: OpenSans;
+  src: url(fonts/IndieFlower.ttf) format('truetype');
+}
