@@ -3,11 +3,6 @@
 // --------------------------------------------------
 
 
-// Links
-// -------------------------
-$linkColor:             $principalColor !default;
-
-
 // Typography
 // -------------------------
 $sansFontFamily:        "indieFlower";
@@ -19,4 +14,13 @@ $baseLineHeight:        20px !default;
 
 
 // Accent colors -----------
+
+$orange:                #f89406 !default;
+// -----------
 $principalColor:       $orange !default;
+
+
+// Links
+// -------------------------
+$linkColor:             $principalColor !default;
+
