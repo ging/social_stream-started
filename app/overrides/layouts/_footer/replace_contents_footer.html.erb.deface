@@ -5,7 +5,7 @@
           <%= Date.today.year %> © 
         </li>
         <li id="trade_mark">
-          <%= link_to t('site.name'), 'http://fi-ware.idm.com/' %>
+          <%= link_to t('site.name'), 'http://social-stream.dit.upm.es/' %>
         </li>
         <li>
           a core for building social network applications!
