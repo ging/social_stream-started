@@ -74,10 +74,10 @@ RUN gem install ./vendor/cache/net-ssh-2.6.8.gem
 # RUN gem install ./vendor/cache/social_stream-presence-2.2.1.gem
 
 
-
-RUN bundle install --verbose
+# RUN bundle outdated --only-explicit
+# RUN bundle install --verbose
 
 # Default command to run
-CMD ["rails", "s"]
+CMD ["/bin/bash"]
 
 EXPOSE 3000

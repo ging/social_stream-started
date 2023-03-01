@@ -22,7 +22,7 @@ gem 'sqlite3','1.4.0'
 #   gem 'uglifier', '>= 1.0.3'
 # end
 
-gem 'jquery-rails', '>= 3.0.0'
+# gem 'jquery-rails', '>= 3.0.0' # social_stream-base (~> 2.2.2) was resolved to 2.2.2, which depends on jquery-rails (>= 3.0.0)
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.0'
 
