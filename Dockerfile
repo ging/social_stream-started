@@ -1,4 +1,9 @@
 FROM ruby:2.3.0
+RUN apt-get update -qq && apt-get install -y  --force-yes build-essential libpq-dev nodejs sqlite3 libsqlite3-dev
+
+
+RUN apt-get install -y libc6-dev --force-yes
+RUN apt-get install -y libevent-dev  --force-yes
 
 RUN apt-key list | grep -A 1 expired 
 # RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 1668892417
@@ -49,11 +54,6 @@ COPY . .
 
 
 
-# Install dependencies
-# RUN apt-get update && apt-get install -qq -y build-essential nodejs npm
-
-# RUN gem install rubygems-update -v 2.7.11
-# RUN update_rubygems
 
 
 RUN gem install connection_pool -v 1.2.0
@@ -61,7 +61,7 @@ RUN gem install json -v=1.8.3
 RUN gem install rack -v=1.2
 # RUN gem install mimemagic -v=0.1.9
 RUN gem install ./vendor/cache/rails-3.2.13.gem
-RUN gem install ./vendor/cache/sqlite3-1.3.8.gem
+RUN gem install ./vendor/cache/sqlite3-1.4.0.gem
 RUN gem install ./vendor/cache/xmpp4r-0.5.gem
 RUN gem install ./vendor/cache/net-ssh-2.6.8.gem
 # RUN gem install ./vendor/cache/social_stream-2.2.2.gem
