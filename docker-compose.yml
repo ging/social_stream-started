@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+
+    volumes: 
+      - db:/var/lib/postgresql/data
+
+  app:
+    build: . 
+    image: ss:latest
+    # command: ["rdbg", "-n", "--open", "--host", "0.0.0.0", "--port", "12345", "-c", "--", "rails", "server", "-b", "0.0.0.0"]
+    
+    environment:
+      - DATABASE_URL=postgres://postgres@db:5432/myapp
+      - RAILS_ENV=production
+    ports:
+      - "3000:3000"
+      - 12345:12345
+    links:
+      - db
+    tty: true
+    volumes:
+      - .:/myapp
+
+volumes:
+  db:
+    driver: local
