@@ -40,3 +40,4 @@ gem 'bcrypt-ruby', '3.1.0'
 
 # gem 'social_stream', git: 'https://github.com/ging/social_stream.git', branch: 'master'
 gem "social_stream", path: "./local/social_stream"
+gem "activesupport", "3.2.13"

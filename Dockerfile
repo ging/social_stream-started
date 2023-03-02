@@ -52,10 +52,7 @@ WORKDIR $APP_HOME
 COPY . .
 
 
-
-
-
-
+RUN gem install bundler:1.17.3
 RUN gem install connection_pool -v 1.2.0
 RUN gem install json -v=1.8.3
 RUN gem install rack -v=1.2
@@ -75,7 +72,7 @@ RUN gem install ./vendor/cache/net-ssh-2.6.8.gem
 
 
 # RUN bundle outdated --only-explicit
-# RUN bundle install --verbose
+RUN bundle _1.17.3_ install --verbose
 
 # Default command to run
 CMD ["/bin/bash"]
